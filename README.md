@@ -15,7 +15,7 @@ wget https://launchpad.net/~vlijm/+archive/ubuntu/spaceview/+files/spaceview_0.5
 sudo apt install wmctrl
 sudo dpkg -i spaceview.deb
 
-sudo apt-get install google-chrome-stable git terminator synaptic ppa-purge xournal
+sudo apt-get install google-chrome-stable git terminator synaptic ppa-purge xournal bleachbit
 
 sudo apt-get --with-new-pkgs upgrade
 
