@@ -1,8 +1,7 @@
 # ubuntu-settings
 
 ```
-
-sudo apt remove aisleriot gnome-mahjongg gnome-mines gnome-sudoku transmission-*
+sudo apt remove aisleriot gnome-mahjongg gnome-mines gnome-sudoku transmission-* snapd
 
 sudo add-apt-repository ppa:noobslab/macbuntu
 sudo add-apt-repository ppa:libreoffice/ppa
@@ -19,7 +18,7 @@ sudo apt-get install google-chrome-stable git terminator synaptic ppa-purge xour
 
 sudo apt-get --with-new-pkgs upgrade
 
-sudo apt-get autoremove
+sudo apt-get autoremove --purge 
 
 sudo apt remove gnome-shell
 
