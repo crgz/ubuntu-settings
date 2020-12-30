@@ -20,7 +20,7 @@ sudo apt-get --with-new-pkgs upgrade
 
 sudo apt-get autoremove --purge 
 
-sudo apt remove gnome-shell
+sudo apt remove gnome-shell thunderbird
 
 wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | sudo apt-key add -
 sudo add-apt-repository 'deb https://repo.vivaldi.com/archive/deb/ stable main'
