@@ -1,7 +1,7 @@
 # ubuntu-settings
 
 ```
-sudo apt remove aisleriot gnome-mahjongg gnome-mines gnome-sudoku transmission-* snapd
+sudo apt remove aisleriot gnome-mahjongg gnome-mines gnome-sudoku snapd
 
 sudo add-apt-repository ppa:noobslab/macbuntu
 sudo add-apt-repository ppa:libreoffice/ppa
