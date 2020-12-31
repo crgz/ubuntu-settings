@@ -70,3 +70,13 @@ for package in macbuntu-os-icons-lts-v7 macbuntu-os-ithemes-lts-v7 macbuntu-os-p
       sudo apt-get install $package
     }
 done
+
+for package in idea; do
+    ! command -v idea &> /dev/null && {
+        echo "$package is installed."
+    } || {
+      wget -nc https://download-cf.jetbrains.com/idea/ideaIC-2020.3.1.tar.gz
+      tar xf ideaIC-2020.3.1.tar.gz -C ~/Public/
+      ~/Public/idea-IC-203.6682.168/bin/idea.sh
+    }
+done
