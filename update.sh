@@ -3,8 +3,7 @@ sudo apt remove -y aisleriot gnome-mahjongg gnome-mines gnome-sudoku snapd gnome
 
 sudo add-apt-repository ppa:libreoffice/ppa -y
 
-sudo apt install -y unity-tweak-tool indicator-multiload maven google-chrome-stable git \
-terminator synaptic ppa-purge xournal bleachbit plank
+sudo apt install -y unity-tweak-tool indicator-multiload maven git terminator synaptic ppa-purge xournal bleachbit plank
 
 git config --global user.email "5125929+crgz@users.noreply.github.com"
 git config --global user.name "Conrado M. Rodriguez"
@@ -12,6 +11,8 @@ git config --global core.editor "vi"
 
 sudo apt-get --with-new-pkgs upgrade
 sudo apt-get autoremove --purge
+
+# Install from PPA
 
 for package in my-weather-indicator; do
     dpkg -s "$package" >/dev/null 2>&1 && {
@@ -51,6 +52,38 @@ for package in webmin; do
     }
 done
 
+# Install from Download deb files
+
+for package in macbuntu-os-icons-v9; do
+    dpkg -s "$package" >/dev/null 2>&1 && {
+        echo "$package is installed."
+    } || {
+      wget -qO https://launchpadlibrarian.net/322222558/macbuntu-os-icons-v9_3.22~zesty~NoobsLab.com_all.deb
+      sudo dpkg -i macbuntu-os-icons-v9_3.22~zesty~NoobsLab.com_all.deb
+      rm macbuntu-os-icons-v9_3.22~zesty~NoobsLab.com_all.deb
+    }
+done
+
+for package in macbuntu-os-ithemes-v9; do
+    dpkg -s "$package" >/dev/null 2>&1 && {
+        echo "$package is installed."
+    } || {
+      wget -qO https://launchpadlibrarian.net/324242017/macbuntu-os-ithemes-v9_3.22-1~zesty~NoobsLab.com_all.deb
+      sudo dpkg -i macbuntu-os-ithemes-v9_3.22-1~zesty~NoobsLab.com_all.deb
+      rm macbuntu-os-ithemes-v9_3.22-1~zesty~NoobsLab.com_all.deb
+    }
+done
+
+for package in macbuntu-os-plank-theme-v9; do
+    dpkg -s "$package" >/dev/null 2>&1 && {
+        echo "$package is installed."
+    } || {
+      wget -qO https://launchpadlibrarian.net/322222609/macbuntu-os-plank-theme-v9_3.22~zesty~NoobsLab.com_all.deb
+      sudo dpkg -i macbuntu-os-plank-theme-v9_3.22~zesty~NoobsLab.com_all.deb
+      rm macbuntu-os-plank-theme-v9_3.22~zesty~NoobsLab.com_all.deb
+    }
+done
+
 for package in spaceview; do
     dpkg -s "$package" >/dev/null 2>&1 && {
         echo "$package is installed."
@@ -59,15 +92,6 @@ for package in spaceview; do
       sudo apt install wmctrl
       sudo dpkg -i spaceview.deb
       rm spaceview.deb
-    }
-done
-
-for package in macbuntu-os-icons-lts-v7 macbuntu-os-ithemes-lts-v7 macbuntu-os-plank-theme-lts-v7; do
-    dpkg -s "$package" >/dev/null 2>&1 && {
-        echo "$package is installed."
-    } || {
-      sudo add-apt-repository ppa:noobslab/macbuntu -y
-      sudo apt-get install $package
     }
 done
 
