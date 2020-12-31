@@ -1,5 +1,5 @@
 #!/bin/sh
-sudo apt remove -y aisleriot gnome-mahjongg gnome-mines gnome-sudoku transmission-* snapd gnome-shell nano
+sudo apt remove -y aisleriot gnome-mahjongg gnome-mines gnome-sudoku snapd gnome-shell nano
 
 sudo add-apt-repository ppa:libreoffice/ppa -y
 
