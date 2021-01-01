@@ -4,7 +4,7 @@ sudo apt remove -y aisleriot gnome-mahjongg gnome-mines gnome-sudoku snapd gnome
 sudo add-apt-repository ppa:libreoffice/ppa -y
 
 sudo apt install -y unity-tweak-tool maven git terminator synaptic ppa-purge xournal bleachbit plank \
-indicator-multiload redshift redshift-gtk smbclient
+indicator-multiload redshift redshift-gtk smbclient hplip hplip-gui
 
 git config --global user.email "5125929+crgz@users.noreply.github.com"
 git config --global user.name "Conrado M. Rodriguez"
