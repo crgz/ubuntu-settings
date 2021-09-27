@@ -4,7 +4,7 @@ sudo apt remove -y aisleriot gnome-mahjongg gnome-mines gnome-sudoku snapd gnome
 sudo add-apt-repository ppa:libreoffice/ppa -y
 
 sudo apt install -y unity-tweak-tool maven git terminator synaptic ppa-purge xournal bleachbit plank \
-indicator-multiload redshift redshift-gtk nmap gimp smbclient
+indicator-multiload nmap gimp smbclient
 
 git config --global user.email "5125929+crgz@users.noreply.github.com"
 git config --global user.name "Conrado M. Rodriguez"
@@ -29,16 +29,6 @@ for package in indicator-notifications; do
         echo "$package is installed."
     } || {
       sudo add-apt-repository ppa:jconti/recent-notifications
-      sudo apt-get install $package
-    }
-done
-
-for package in vivaldi-stable; do
-    dpkg -s "$package" >/dev/null 2>&1 && {
-        echo "$package is installed."
-    } || {
-      wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | sudo apt-key add -
-      sudo add-apt-repository 'deb https://repo.vivaldi.com/archive/deb/ stable main'
       sudo apt-get install $package
     }
 done
